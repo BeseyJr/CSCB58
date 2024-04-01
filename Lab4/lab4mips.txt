@@ -1,0 +1,20 @@
+# Basic MIPS Assembly Program Example
+# Author: Your Name
+# UTorID: Your UTorID
+
+    .text                   # Start of code section
+    .globl main             # Declaration of the main section
+
+main:                       # Main program label
+    # Initialize registers with values to add
+    li $t0, 5               # Load immediate value 5 into register $t0
+    li $t1, 10              # Load immediate value 10 into register $t1
+
+    # Perform addition
+    add $t2, $t0, $t1       # Add the values in $t0 and $t1, store result in $t2
+
+    # Exit program
+    li $v0, 10              # Load the exit syscall code into register $v0
+    syscall                 # Make a syscall, which in this case exits the program
+
+# End of the program
